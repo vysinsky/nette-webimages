@@ -83,8 +83,7 @@ class Extension extends DI\CompilerExtension
 					->setClass('DotBlue\WebImages\Route', [
 						$definition['mask'],
 						$definition['defaults'],
-						$this->prefix('@generator'),
-						$definition['secured'] ? NetteRoute::SECURED : 0,
+						$this->prefix('@generator')
 					])
 					->addTag($this->prefix('route'))
 					->setAutowired(FALSE);
